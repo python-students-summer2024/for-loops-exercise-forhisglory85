@@ -8,27 +8,18 @@ Feel free to comment/uncomment or otherwise modify any line of code in this file
 # calculate how many people will be infected by a population of 10 infected people over 14 days, assuming a transmission rate of 1.2
 from virus_transmission import calculate_infections
 
-starting_infections = 2
-reproduction_rate = 1.1
-num_days = 62
-total_infections = calculate_infections(
-    starting_infections, reproduction_rate, num_days
-)  # calculate total infections
-print(
-    "{} people will go on to create a total of {} infections over {} days, assuming a reproduction rate of {}".format(
-        starting_infections, total_infections, num_days, reproduction_rate
-    )
-)
+calculate_infections(10, 1.2, 14)
 
 
 # #### NUMBER GUESSING ####
 # ask the user to guess a number between 1 and 10... give them 5 attempts
 from number_guessing import guess_number
 
-if guess_number(1, 10, 5):
-    print("You guessed correctly!")  # they guessed correctly!
-else:
-    print("Sorry, all your guesses were incorrect!")  # they guessed incorrectly!
+#if guess_number(1, 10, 5):
+#   print("You guessed correctly!")  # they guessed correctly!
+#else:
+#    print("Sorry, all your guesses were incorrect!")  # they guessed incorrectly!
+#guess_number(1, 10, 5)
 
 
 # #### FOR LOOPING TURTLES ####

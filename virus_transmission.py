@@ -6,7 +6,6 @@ Do not run this file directly.
 Rather, call this function from main.py and run that file.
 """
 
-
 def calculate_infections(starting_number_infections, reproduction_rate, num_days):
     """
     Write a function that predicts the approximate number of infected individuals from a socially-transmitted viral infection after a given number of days.
@@ -17,3 +16,9 @@ def calculate_infections(starting_number_infections, reproduction_rate, num_days
     :param reproduction_rate: A floating point number indicating the rate of growth in the number of infections each day.
     :returns: The new number of infected individuals after the given number of days, rounded to the nearest integer.
     """
+    total_infections = starting_number_infections
+    
+    for i in range(num_days):
+        total_infections *= reproduction_rate
+
+    return round(total_infections)
